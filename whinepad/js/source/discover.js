@@ -2,6 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Dialog from './components/Dialog'
+import Actions from './components/Actions';
+import Form from './components/Form';
 import FormInput from './components/FormInput';
 import Rating from './components/Rating';
 import Suggest from './components/Suggest';
@@ -62,6 +65,32 @@ ReactDOM.render(
         <td><FormInput type="text" /></td>
       </tr>
     </tbody></table>
+
+    <h2>Form</h2>
+    <Form
+      fields={[
+        {label: 'Rating', type: 'rating', id: 'rateme'},
+        {label: 'Greetings', id: 'freetext'},
+      ]}
+      initialData={ {rateme: 4, freetext: 'Hello'} } />
+
+    <h2>Actions</h2>
+    <div><Actions onAction={type => alert(type)} /></div>
+
+    <h2>Dialogs</h2>
+    <Dialog
+      header="Out of the box example"
+      onAction={type => alert(type)}>
+        Hello, dialog!
+    </Dialog>
+    <Dialog
+      header="No cancel, custom button"
+      hasCancel={false}
+      confirmLabel="Whatever"
+      onAction={type => alert(type)}>
+        Anything goes here, see:
+        <Button>A button</Button>
+    </Dialog>
 
     {/* more components go here... */}
 
