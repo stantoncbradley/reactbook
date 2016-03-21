@@ -8,6 +8,10 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _FormInput = require('./components/FormInput');
+
+var _FormInput2 = _interopRequireDefault(_FormInput);
+
 var _Rating = require('./components/Rating');
 
 var _Rating2 = _interopRequireDefault(_Rating);
@@ -119,5 +123,105 @@ _reactDom2.default.render(_react2.default.createElement(
     null,
     'Read-only: ',
     _react2.default.createElement(_Rating2.default, { readonly: true, defaultValue: 3 })
+  ),
+  _react2.default.createElement(
+    'h2',
+    null,
+    'Form inputs'
+  ),
+  _react2.default.createElement(
+    'table',
+    null,
+    _react2.default.createElement(
+      'tbody',
+      null,
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Vanilla input'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, null)
+        )
+      ),
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Prefilled'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, { defaultValue: 'it\'s like a default' })
+        )
+      ),
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Year'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, { type: 'year' })
+        )
+      ),
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Rating'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, { type: 'rating', defaultValue: 4 })
+        )
+      ),
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Suggestion'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, {
+            type: 'suggestion',
+            options: ['red', 'green', 'blue'],
+            defaultValue: 'green' })
+        )
+      ),
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'td',
+          null,
+          'Vanilla textarea'
+        ),
+        _react2.default.createElement(
+          'td',
+          null,
+          _react2.default.createElement(_FormInput2.default, { type: 'text' })
+        )
+      )
+    )
   )
 ), document.getElementById('pad'));
