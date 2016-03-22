@@ -123,7 +123,7 @@ var Whinepad = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'whinepad' },
+        { className: 'Whinepad' },
         _react2.default.createElement(
           'div',
           { className: 'WhinepadToolbar' },
@@ -140,7 +140,7 @@ var Whinepad = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'WhinepadToobarSearch' },
+            { className: 'WhinepadToolbarSearch' },
             _react2.default.createElement('input', {
               placeholder: 'Search...',
               onChange: this._search.bind(this),

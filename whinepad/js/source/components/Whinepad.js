@@ -72,7 +72,7 @@ class Whinepad extends Component {
 
   render() {
     return (
-      <div className="whinepad">
+      <div className="Whinepad">
         <div className="WhinepadToolbar">
           <div className="WhinepadToolbarAdd">
             <Button
@@ -81,7 +81,7 @@ class Whinepad extends Component {
               + add
             </Button>
           </div>
-          <div className="WhinepadToobarSearch">
+          <div className="WhinepadToolbarSearch">
             <input
               placeholder="Search..."
               onChange={this._search.bind(this)}
