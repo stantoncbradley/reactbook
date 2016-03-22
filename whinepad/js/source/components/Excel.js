@@ -14,7 +14,7 @@ class Excel extends Component {
       data: this.props.initialData,
       sortby: null, // schema.id
       descending: false,
-      edit: null, // [row index, schema.id],
+      edit: null, // [row index, schema.id]
       dialog: null, // {type, idx}
     };
   }
@@ -67,6 +67,7 @@ class Excel extends Component {
   }
 
   _deleteConfirmationClick(action) {
+
     if (action === 'dismiss') {
       this._closeDialog();
       return;
@@ -167,7 +168,7 @@ class Excel extends Component {
               }
               let title = item.label;
               if (this.state.sortby === item.id) {
-                title += this.state.descending ? ' \u2191' : ' \u2193';
+                title += this.state.descending ? '\u2191' : '\u2193';
               }
               return (
                 <th
@@ -221,7 +222,7 @@ class Excel extends Component {
                   );
                 }, this)}
                 <td className="ExcelDataCenter">
-                  <Actions onAction={this._actionClick.bind(this, rowidx)}/>
+                  <Actions onAction={this._actionClick.bind(this, rowidx)} />
                 </td>
               </tr>
             );

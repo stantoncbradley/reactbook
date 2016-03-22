@@ -62,7 +62,6 @@ var Whinepad = function (_Component) {
   }, {
     key: '_addNew',
     value: function _addNew(action) {
-      debugger;
       if (action === 'dismiss') {
         this.setState({ addnew: false });
         return;

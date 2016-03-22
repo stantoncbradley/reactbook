@@ -20,7 +20,6 @@ class Whinepad extends Component {
   }
 
   _addNew(action) {
-    debugger;
     if (action === 'dismiss') {
       this.setState({addnew: false});
       return;

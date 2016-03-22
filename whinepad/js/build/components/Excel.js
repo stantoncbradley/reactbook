@@ -58,7 +58,7 @@ var Excel = function (_Component) {
       data: _this.props.initialData,
       sortby: null, // schema.id
       descending: false,
-      edit: null, // [row index, schema.id],
+      edit: null, // [row index, schema.id]
       dialog: null };
     return _this;
   }
@@ -118,6 +118,7 @@ var Excel = function (_Component) {
   }, {
     key: '_deleteConfirmationClick',
     value: function _deleteConfirmationClick(action) {
+
       if (action === 'dismiss') {
         this._closeDialog();
         return;
@@ -232,7 +233,7 @@ var Excel = function (_Component) {
               }
               var title = item.label;
               if (_this2.state.sortby === item.id) {
-                title += _this2.state.descending ? ' ↑' : ' ↓';
+                title += _this2.state.descending ? '↑' : '↓';
               }
               return _react2.default.createElement(
                 'th',
