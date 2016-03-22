@@ -58,15 +58,15 @@ var Excel = function (_Component) {
       data: _this.props.initialData,
       sortby: null, // schema.id
       descending: false,
-      edit: null, // [row index, schema.id]
+      edit: null, // [row index, schema.id],
       dialog: null };
     return _this;
   }
 
   _createClass(Excel, [{
-    key: 'componentwillReceiveProps',
+    key: 'componentWillReceiveProps',
     // {type, idx}
-    value: function componentwillReceiveProps(nextProps) {
+    value: function componentWillReceiveProps(nextProps) {
       this.setState({ data: nextProps.initialData });
     }
   }, {
@@ -232,7 +232,7 @@ var Excel = function (_Component) {
               }
               var title = item.label;
               if (_this2.state.sortby === item.id) {
-                title += _this2.state.descending ? '↑' : '↓';
+                title += _this2.state.descending ? ' ↑' : ' ↓';
               }
               return _react2.default.createElement(
                 'th',
