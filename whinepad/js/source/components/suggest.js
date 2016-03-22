@@ -8,7 +8,7 @@ class Suggest extends Component {
   }
 
   getValue() {
-    return this.sate.value;
+    return this.state.value;
   }
 
   render() {

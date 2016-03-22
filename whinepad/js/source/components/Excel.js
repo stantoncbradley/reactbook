@@ -40,7 +40,7 @@ class Excel extends Component {
       sortby: key,
       descending: descending,
     });
-    this.fireDataChange(data);
+    this._fireDataChange(data);
   }
 
   _showEditor(e) {
@@ -95,7 +95,7 @@ class Excel extends Component {
       dialog: null,
       data: data,
     });
-    this.fireDataChange(data);
+    this._fireDataChange(data);
   }
 
   render() {
@@ -138,7 +138,7 @@ class Excel extends Component {
     );
   }
 
-  renderFormDialog(readonly) {
+  _renderFormDialog(readonly) {
     return (
       <Dialog
         modal={true}

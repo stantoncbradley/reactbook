@@ -33,7 +33,7 @@ var Suggest = function (_Component) {
   _createClass(Suggest, [{
     key: 'getValue',
     value: function getValue() {
-      return this.sate.value;
+      return this.state.value;
     }
   }, {
     key: 'render',

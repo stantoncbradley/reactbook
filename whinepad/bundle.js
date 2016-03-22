@@ -240,7 +240,7 @@ Dialog.defaultProps = {
   confirmLabel: 'ok',
   modal: false,
   onAction: function onAction() {},
-  hashCancel: true
+  hasCancel: true
 };
 
 exports.default = Dialog;
@@ -334,7 +334,7 @@ var Excel = function (_Component) {
         sortby: key,
         descending: descending
       });
-      this.fireDataChange(data);
+      this._fireDataChange(data);
     }
   }, {
     key: '_showEditor',
@@ -395,7 +395,7 @@ var Excel = function (_Component) {
         dialog: null,
         data: data
       });
-      this.fireDataChange(data);
+      this._fireDataChange(data);
     }
   }, {
     key: 'render',
@@ -441,8 +441,8 @@ var Excel = function (_Component) {
       );
     }
   }, {
-    key: 'renderFormDialog',
-    value: function renderFormDialog(readonly) {
+    key: '_renderFormDialog',
+    value: function _renderFormDialog(readonly) {
       return _react2.default.createElement(
         _Dialog2.default,
         {
@@ -951,7 +951,7 @@ var Suggest = function (_Component) {
   _createClass(Suggest, [{
     key: 'getValue',
     value: function getValue() {
-      return this.sate.value;
+      return this.state.value;
     }
   }, {
     key: 'render',
@@ -1053,6 +1053,7 @@ var Whinepad = function (_Component) {
   }, {
     key: '_addNew',
     value: function _addNew(action) {
+      debugger;
       if (action === 'dismiss') {
         this.setState({ addnew: false });
         return;

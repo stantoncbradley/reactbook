@@ -98,7 +98,7 @@ Dialog.defaultProps = {
   confirmLabel: 'ok',
   modal: false,
   onAction: function onAction() {},
-  hashCancel: true
+  hasCancel: true
 };
 
 exports.default = Dialog;

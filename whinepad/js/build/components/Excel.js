@@ -87,7 +87,7 @@ var Excel = function (_Component) {
         sortby: key,
         descending: descending
       });
-      this.fireDataChange(data);
+      this._fireDataChange(data);
     }
   }, {
     key: '_showEditor',
@@ -148,7 +148,7 @@ var Excel = function (_Component) {
         dialog: null,
         data: data
       });
-      this.fireDataChange(data);
+      this._fireDataChange(data);
     }
   }, {
     key: 'render',
@@ -194,8 +194,8 @@ var Excel = function (_Component) {
       );
     }
   }, {
-    key: 'renderFormDialog',
-    value: function renderFormDialog(readonly) {
+    key: '_renderFormDialog',
+    value: function _renderFormDialog(readonly) {
       return _react2.default.createElement(
         _Dialog2.default,
         {

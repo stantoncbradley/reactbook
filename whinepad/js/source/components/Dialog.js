@@ -51,7 +51,7 @@ Dialog.defaultProps = {
   confirmLabel: 'ok',
   modal: false,
   onAction: () => {},
-  hashCancel: true,
+  hasCancel: true,
 };
 
 export default Dialog
